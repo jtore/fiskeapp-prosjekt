@@ -1,3 +1,0 @@
-return (
-    <text>about</text>
-)
