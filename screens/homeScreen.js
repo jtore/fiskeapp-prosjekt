@@ -1,3 +1,0 @@
-return (
-    <Text>test</Text>
-)
