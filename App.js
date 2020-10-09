@@ -1,39 +1,82 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View, Image, Animated, TouchableWithoutFeedback } from 'react-native';
-import MainService from "./app/loadingscreen";
-export default class App extends React.Component {
-  state = {
-    loaded: false
-  }
-  constructor(){
-    super();
-    MainService.load(v => this.setState({loaded: true}));
+import React from 'react'
+import { View } from "react-native"
+import { NavigationContainer } from "@react-navigation/native"
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { AntDesign } from '@expo/vector-icons'; 
+import MapScreen from "./screens/mapScreen";
+import AboutScreen from "./screens/aboutScreen"
+import OverviewScreen from "./screens/overviewScreen"
 
-  }
-const
-  render() {
-    return (
-      <View style={styles.container}>
-        {this.state.loaded ?
-          <View>
-          <Text>FISK!</Text>
-          <View>
-          <Text>FISK!</Text>
-          </View>
-          </View>
-          : <Image source={require('./assets/mainl.svg')} style={{ resizeMode: 'cover', width: '100%', height: '100%' }} />}
-      </View>
+
+
+const Tab = createBottomTabNavigator()
+
+
+function DisplayMapScreen(){
+    return(
+        <View style = {{flex:1, alignItems:"center", justifyContent:"center"}}>
+            <MapScreen/>
+        </View>
     );
-  }
 }
 
-const styles = StyleSheet.create({
-container: {
-  flex: 1,
-  backgroundColor: "#fff",
-  alignItems:"center",
-  justifyContent: "center",
-},
+function DisplayOverviewScreen(){
+    return (
+    <View>
+        <OverviewScreen/>
+    </View>
+    );
+}
 
-});
+
+function DisplayAboutScreen(){
+    return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+        <AboutScreen/>
+    </View>
+    );
+}
+
+
+export default function App() {
+    return (
+        <NavigationContainer>
+            <Tab.Navigator 
+            initialRoutenName = "Map"
+            tabBarOptions ={{
+                activeTintColor: "green"
+            }}
+            >
+                <Tab.Screen 
+                name = "Map" 
+                component = {DisplayMapScreen}
+                options ={{
+                    tabBarIcon: () => (
+                        <AntDesign name="home" size={24} color="black" />
+                    )
+                }}
+                />
+                <Tab.Screen 
+                name = "Overview" 
+                component = {DisplayOverviewScreen}
+                options={{
+                    tabBarIcon: () => (
+                        <AntDesign name="plus" size={24} color="black" />
+                    )
+                }}/>
+                <Tab.Screen 
+                name = "About" 
+                component = {DisplayAboutScreen}
+                options={{
+                    tabBarIcon: () => (
+                        <AntDesign name="info" size={24} color="black"/>
+                    )
+                }}/>
+            </Tab.Navigator>
+        </NavigationContainer> 
+    );
+}
+
+
+
+
