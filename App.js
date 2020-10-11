@@ -2,7 +2,8 @@ import React from 'react'
 import { View } from "react-native"
 import { NavigationContainer } from "@react-navigation/native"
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { AntDesign } from '@expo/vector-icons'; 
+import { SimpleLineIcons } from '@expo/vector-icons'; 
+
 import MapScreen from "./screens/mapScreen";
 import AboutScreen from "./screens/aboutScreen"
 import OverviewScreen from "./screens/overviewScreen"
@@ -52,7 +53,7 @@ export default function App() {
                 component = {DisplayMapScreen}
                 options ={{
                     tabBarIcon: () => (
-                        <AntDesign name="home" size={24} color="black" />
+                        <SimpleLineIcons name="map" size={24} color="black" />
                     )
                 }}
                 />
@@ -61,7 +62,7 @@ export default function App() {
                 component = {DisplayOverviewScreen}
                 options={{
                     tabBarIcon: () => (
-                        <AntDesign name="plus" size={24} color="black" />
+                        <SimpleLineIcons name="list" size={24} color="black" />
                     )
                 }}/>
                 <Tab.Screen 
@@ -69,7 +70,7 @@ export default function App() {
                 component = {DisplayAboutScreen}
                 options={{
                     tabBarIcon: () => (
-                        <AntDesign name="info" size={24} color="black"/>
+                        <SimpleLineIcons name="info" size={24} color="black"/>
                     )
                 }}/>
             </Tab.Navigator>
