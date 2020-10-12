@@ -1,5 +1,5 @@
 import React, { Component }from 'react'
-import {View, Text, StyleSheet,} from "react-native"
+import {View, Text, StyleSheet, FlatList} from "react-native"
 import List from "../components/List"
 
 
@@ -7,9 +7,16 @@ export default function OverviewScreen() {
     return (
     <View>
         <View style={styles.container}>
-            <Text style={styles.text}>
-                test
-            </Text>
+            <FlatList
+            data= {[
+                {key: "Vann1"},
+                {key: "Vann2"},
+                {key: "Vann3"},
+            ]}
+            renderItem = {({item}) => 
+            <Text style = {styles.text}>{item.key}
+            </Text>}
+            />
         </View>
     </View>
     )
@@ -17,11 +24,12 @@ export default function OverviewScreen() {
 
 const styles = StyleSheet.create({
     container:{
-        borderWidth:2,
         margin:50,
+        alignContent: "center",
     },
 
     text: {
-        fontSize:20,
+        fontSize:30,
+        borderWidth:2,
     }
 })
