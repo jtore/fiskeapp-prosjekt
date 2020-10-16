@@ -5,7 +5,6 @@ export default function AboutScreen() {
     return (
         <View>
             <Text style={styles.text}>Laget av Einar, Mads og Joakim</Text>
-    
         </View>
     )
 

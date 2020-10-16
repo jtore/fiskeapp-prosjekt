@@ -9,8 +9,6 @@ import MapScreen from "./screens/mapScreen";
 import AboutScreen from "./screens/aboutScreen"
 import OverviewScreen from "./screens/overviewScreen"
 
-
-
 const Tab = createBottomTabNavigator()
 
 

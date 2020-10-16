@@ -1,22 +1,12 @@
 import React, { Component }from 'react'
 import {View, Text, StyleSheet, FlatList} from "react-native"
-import List from "../components/List"
-
+import OverviewList from "../components/CollapsedList";
 
 export default function OverviewScreen() {
     return (
     <View>
         <View style={styles.container}>
-            <FlatList
-            data= {[
-                {key: "Vann1"},
-                {key: "Vann2"},
-                {key: "Vann3"},
-            ]}
-            renderItem = {({item}) => 
-            <Text style = {styles.text}>{item.key}
-            </Text>}
-            />
+          <OverviewList/>
         </View>
     </View>
     )
