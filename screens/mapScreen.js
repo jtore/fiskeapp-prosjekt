@@ -21,7 +21,6 @@ export default function MapScreen() {
             coordinate={{latitude:60.397076, longitude: 5.324383}}
             title = {"Bergen"}
             description = {"Test test"}
-       
         />
 
         <MapView.Marker

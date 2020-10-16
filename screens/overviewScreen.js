@@ -1,5 +1,6 @@
-import React, { Component, useState }from 'react'
-import {View, Text, StyleSheet, FlatList, TouchableOpacity} from "react-native"
+import React, { Component }from 'react'
+import {View, Text, StyleSheet, FlatList} from "react-native"
+import List from "../components/List"
 
 
 export default function OverviewScreen() {
@@ -30,7 +31,5 @@ const styles = StyleSheet.create({
     text: {
         fontSize:30,
         borderWidth:2,
-        alignItems:"center",
-        paddingLeft: 80,
     }
 })
