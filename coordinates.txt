@@ -1,0 +1,22 @@
+Lovlig fiske:
+
+Haukelandsvatnet: 60.365616, 5.469325
+Nesttunvannet: 60.323625, 5.352544
+Nubbevatnet: 60.360326, 5.388181
+Liavatnet: 60.372849, 5.254294
+Storelva: 60.405133, 5.472729
+
+
+Ikke lovlig fiske:
+
+Jordalsvatnet: 60.434752, 5.337876
+
+Setervatnet: 60.440567, 5.364284
+
+Indrevatnet: 60.430686, 5.353811
+
+Øvre Jordalsvatnet: 60.415950, 5.394317
+
+Tarlebøvatnet: 60.411807, 5.385995
+
+Store Tindevatnet: 60.405945, 5.369000

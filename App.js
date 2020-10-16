@@ -2,6 +2,7 @@ import React from 'react'
 import { View } from "react-native"
 import { NavigationContainer } from "@react-navigation/native"
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createStackNavigator } from '@react-navigation/stack';
 import { SimpleLineIcons } from '@expo/vector-icons'; 
 
 import MapScreen from "./screens/mapScreen";
@@ -38,12 +39,14 @@ function DisplayAboutScreen(){
     );
 }
 
+const Stack = createStackNavigator();
+
 
 export default function App() {
     return (
         <NavigationContainer>
             <Tab.Navigator 
-            initialRoutenName = "Map"
+            initialRouteName = "Map"
             tabBarOptions ={{
                 activeTintColor: "green"
             }}
