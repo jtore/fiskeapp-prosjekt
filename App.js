@@ -59,7 +59,7 @@ export default function App() {
                 }}
                 />
                 <Tab.Screen 
-                name = "Overview" 
+                name = "Information" 
                 component = {DisplayOverviewScreen}
                 options={{
                     tabBarIcon: () => (
