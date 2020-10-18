@@ -12,10 +12,13 @@ export default function MapScreen() {
         latitudeDelta: 0.0491,
         longitudeDelta: 0.0375,
         }}
+
+        showsUserLocation
         >
          
         <MapView.Marker
             // Bergen
+            key = {1}
             coordinate={{latitude:60.397076, longitude: 5.324383}}
             title = {"Bergen"}
             description = {"Test test"}
@@ -25,7 +28,8 @@ export default function MapScreen() {
 
         <MapView.Marker
          /** Haukelandsvatnet **/
-         coordinate={{latitude:60.365616, longitude: 5.469325}}
+            key = {2}
+            coordinate={{latitude:60.365616, longitude: 5.469325}}
             title = {"Haukelandsvatnet"}
             description = {"Haukelandsvatnet er et vann i gamle Arna kommune, nå Bergen kommune. Haukelandsvatnet er en av vannkildene til Storelva (Bergen) som renner ut i Arnavågen, og det største vannet i Arnavassdraget["}
             image = {require("../images/fisk.png")}
@@ -34,7 +38,8 @@ export default function MapScreen() {
 
          <MapView.Marker
          /** Nesttunvannet **/
-         coordinate={{latitude:60.323625, longitude: 5.352544}}
+            key = {3}
+            coordinate={{latitude:60.323625, longitude: 5.352544}}
             title = {"Nesttunvannet"}
             description = {"Test test"}
             image = {require("../images/fisk.png")}
