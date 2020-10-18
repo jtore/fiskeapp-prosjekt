@@ -45,7 +45,7 @@ export default function MapScreen() {
          /** Nubbevatnet **/
             coordinate={{latitude:60.360326, longitude: 5.388181}}
             title = {"Nubbevatnet"}
-            description = {"Test test"}
+            description = {"Fiskeart: Ørret"}
             image = {require("../images/fisk.png")}
         />
          
