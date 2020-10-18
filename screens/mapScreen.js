@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { AppRegistry, StyleSheet, View, Dimensions, Text,TouchableOpacity } from 'react-native';
 import MapView, { PROVIDER_GOOGLE, Callout } from 'react-native-maps';
-import { Marker } from "react-native-maps";
-
 
 export default function MapScreen() {
     
@@ -21,7 +19,9 @@ export default function MapScreen() {
             coordinate={{latitude:60.397076, longitude: 5.324383}}
             title = {"Bergen"}
             description = {"Test test"}
-        />
+            />
+    
+       
 
         <MapView.Marker
          /** Haukelandsvatnet **/

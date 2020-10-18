@@ -20,6 +20,7 @@ export default function OverviewList() {
       <SafeAreaView>
         <ScrollView>
       <View>
+        
         <SearchBar
           placeholder = "HMMMM..."
           onChangeText = {updateSearch}
@@ -29,21 +30,20 @@ export default function OverviewList() {
        
           <CollapsedView title="Haukelandsvannet">
             <View style = {styles.container}>
-              
               <View style = {styles.textcontainer}>
-              <Text style = {styles.infoText}> 
-              Haukelandsvatnet er et vann i gamle Arna kommune, nå Bergen kommune. 
-              Haukelandsvatnet er en av vannkildene til Storelva (Bergen) som renner
-              ut i Arnavågen, og det største vannet i Arnavassdraget
-              </Text>
-            </View>
+                <Text style = {styles.infoText}> 
+                Haukelandsvatnet er et vann i gamle Arna kommune, nå Bergen kommune. 
+                Haukelandsvatnet er en av vannkildene til Storelva (Bergen) som renner
+                ut i Arnavågen, og det største vannet i Arnavassdraget
+                </Text>
+              </View>
           <View style = {styles.fishwaterPhoto}>
             <Image 
             source={require("../images/haukelandsvannet.jpeg")}/>
             <Text style = {styles.photoSource}>
               Haukelandsvannet {"\n"}
               Bergen Sportsfiskeklubb
-              </Text>
+            </Text>
           </View>
           
           </View>
@@ -51,15 +51,25 @@ export default function OverviewList() {
             
             <CollapsedView title="Nesttunvatnet">
               <View style = {styles.container}>
-                <Text style = {styles.text}>
-                I Nesttunvatnet finnes bestander av ørret, gjedde og abbor. 
-                Vannet ligger sentralt til på Nesttun og deler av vannet er lett 
-                tilgjengelig. 
-                Utløpene av Nesttunelva og Sandalselva er gode fiskeplasser. 
-                Deler av strandsonen langs Nesttunvatnet eies av Bergen kommune.
-                I 2012 gjennomførte Hop ungdomsskole et prøvefiske i vannet og de 
-                ble fanget både stor abbor og gjedde
-                </Text>
+                <View style = {styles.textcontainer}>
+                  <Text style = {styles.text}>
+                  I Nesttunvatnet finnes bestander av ørret, gjedde og abbor. 
+                  Vannet ligger sentralt til på Nesttun og deler av vannet er lett 
+                  tilgjengelig. 
+                  Utløpene av Nesttunelva og Sandalselva er gode fiskeplasser. 
+                  Deler av strandsonen langs Nesttunvatnet eies av Bergen kommune.
+                  I 2012 gjennomførte Hop ungdomsskole et prøvefiske i vannet og de 
+                  ble fanget både stor abbor og gjedde
+                  </Text>
+                </View>
+                <View style = {styles.fishwaterPhoto}>
+                  <Image 
+                  source={require("../images/nesttunvannet.jpg")}/>
+                  <Text style = {styles.photoSource}>
+                    Nesttunvannet {"\n"}
+                  </Text>
+               </View>
+
               </View>
             </CollapsedView>
             
@@ -92,7 +102,7 @@ export default function OverviewList() {
   const styles = StyleSheet.create({
     container: {
     flex:1,
-     borderWidth:1,
+     borderWidth:StyleSheet.hairlineWidth,
      borderColor:"black",
     },
     
@@ -110,7 +120,7 @@ export default function OverviewList() {
     },
 
     fishwaterPhoto: {
-      borderWidth:1,
+      borderWidth:StyleSheet.hairlineWidth,
       borderColor:"black",
       padding: 20,
     },
