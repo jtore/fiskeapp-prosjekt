@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { AppRegistry, StyleSheet, View, Dimensions, Text,TouchableOpacity } from 'react-native';
-import MapView, { PROVIDER_GOOGLE, Callout } from 'react-native-maps';
+import MapView, { PROVIDER_GOOGLE, Callout, Marker } from 'react-native-maps';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
 export default function MapScreen() {
     
@@ -12,18 +14,18 @@ export default function MapScreen() {
         latitudeDelta: 0.0491,
         longitudeDelta: 0.0375,
         }}
-
-        showsUserLocation
         >
          
-        <MapView.Marker
-            // Bergen
-            key = {1}
-            coordinate={{latitude:60.397076, longitude: 5.324383}}
-            title = {"Bergen"}
-            description = {"Test test"}
-            />
-    
+ 
+       <Marker coordinate={{latitude:60.397076, longitude: 5.324383}}>
+        
+            <Callout style={styles.plainView}>
+              <View>
+                <Text>Testeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeest</Text>
+              </View>
+            </Callout>
+            
+          </Marker>
        
 
         <MapView.Marker
@@ -128,9 +130,6 @@ export default function MapScreen() {
             description = {"Nedbørsfelt, IKKE lovlig fiske"}
             image = {require("../images/forbudtskilt.png")}
         />
-
-     
-
         
 
     </MapView>
@@ -143,7 +142,14 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
     alignItems: 'center',
     },
+
     map: {
-    ...StyleSheet.absoluteFillObject,
+    ...StyleSheet.absoluteFill,
     },
+
+    plainView: {
+        width:200,
+        position: "absolute"
+          },
+
    });

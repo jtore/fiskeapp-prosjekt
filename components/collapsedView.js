@@ -5,7 +5,7 @@ import Collapsible from "react-native-collapsible"
 
 export default function CollapsedView(props) {
 
-    const[collapsed, setCollapsed] = useState(false);
+    const[collapsed, setCollapsed] = useState(true);
   
     return (
         <View style = {styles.container}>
@@ -28,7 +28,6 @@ export default function CollapsedView(props) {
             marginTop: 20,
 
         },
-
 
         button: {
             marginTop: 20,

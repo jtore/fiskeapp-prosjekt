@@ -5,6 +5,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 
 import { SimpleLineIcons } from '@expo/vector-icons'; 
+import { FontAwesome5 } from '@expo/vector-icons'; 
 
 import MapScreen from "./screens/mapScreen";
 import AboutScreen from "./screens/aboutScreen"
@@ -72,19 +73,19 @@ export default function App() {
                 }}
                 />
                 <Tab.Screen 
-                name = "Information" 
+                name = "Waters for fishing" 
                 component = {DisplayOverviewScreen}
                 options={{
                     tabBarIcon: () => (
-                        <SimpleLineIcons name="list" size={24} color="black" />
+                        <FontAwesome5 name="water" size={24} color="royalblue" />
                     )
                 }}/>
                 <Tab.Screen 
-                name = "About" 
+                name = "Tools" 
                 component = {DisplayAboutScreen}
                 options={{
                     tabBarIcon: () => (
-                        <SimpleLineIcons name="info" size={24} color="black"/>
+                        <FontAwesome5 name="tools" size={24} color="black" />
                     )
                 }}/>
             </Tab.Navigator>
