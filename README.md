@@ -2,7 +2,8 @@
 
 ## About: 
 
-App-project in INFO212, Information Science, UiB
+App-project in the subject INFO212
+Information Science, University of Bergen
 
 We wanted to make an application that allows the user to locate waters 
 for freshwater-fishing and get information like type of fish present,
