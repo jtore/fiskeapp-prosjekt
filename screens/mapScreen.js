@@ -130,7 +130,6 @@ export default function MapScreen() {
             description = {"Nedbørsfelt, IKKE lovlig fiske"}
             image = {require("../images/forbudtskilt.png")}
         />
-        
 
     </MapView>
 };
