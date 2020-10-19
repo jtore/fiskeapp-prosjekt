@@ -15,27 +15,31 @@ export default function MapScreen() {
         longitudeDelta: 0.0375,
         }}
         >
-         
- 
-       <Marker coordinate={{latitude:60.397076, longitude: 5.324383}}>
-        
-            <Callout style={styles.plainView}>
-              <View>
-                <Text>Testeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeest</Text>
-              </View>
-            </Callout>
-            
-          </Marker>
+
        
 
         <MapView.Marker
-         /** Haukelandsvatnet **/
+         /** Haukelandsvannet **/
             key = {2}
             coordinate={{latitude:60.365616, longitude: 5.469325}}
-            title = {"Haukelandsvatnet"}
-            description = {"Haukelandsvatnet er et vann i gamle Arna kommune, nå Bergen kommune. Haukelandsvatnet er en av vannkildene til Storelva (Bergen) som renner ut i Arnavågen, og det største vannet i Arnavassdraget["}
+            title = {"Haukelandsvannet"}
             image = {require("../images/fisk.png")}
-        />
+            >
+            <MapView.Callout style={styles.plainView}>
+                <View>
+                    <Text>
+                    <Text style = {styles.boldText}>Haukelandsvannet</Text>
+                    {"\n\n"}
+                    <Text style = {styles.boldText}>Fiskekort:</Text>
+                    Det er ikke salg av fiskekort i vannet i pr dags dato.
+                    {"\n\n"}
+                    <Text style = {styles.boldText}>Passer for:</Text>
+                    Fluefiske, tørrfluefiske, slukfiske, dorging, meiting.
+                    </Text>
+                </View>
+            </MapView.Callout>
+
+        </MapView.Marker>
 
 
          <MapView.Marker
@@ -150,5 +154,10 @@ const styles = StyleSheet.create({
         width:200,
         position: "absolute"
           },
+
+    boldText:{
+    fontWeight: "bold",
+    },
+
 
    });

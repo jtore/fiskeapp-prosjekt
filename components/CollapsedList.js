@@ -87,7 +87,8 @@ export default function OverviewList() {
 
               <View style = {styles.fishwaterPhoto}>
                 <Image 
-                source={require("../images/haukelandsvannet.jpeg")}/>
+                source={require("../images/haukelandsvannet.jpeg")}
+                />
                 <Text style = {styles.photoSource}>
                   Haukelandsvannet {"\n"}
                   Bergen Sportsfiskeklubb
