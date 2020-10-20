@@ -3,16 +3,17 @@ import { View } from "react-native"
 import { NavigationContainer } from "@react-navigation/native"
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
+
 import { SimpleLineIcons } from '@expo/vector-icons'; 
+import { FontAwesome5 } from '@expo/vector-icons'; 
 
 import MapScreen from "./screens/mapScreen";
 import AboutScreen from "./screens/aboutScreen"
 import OverviewScreen from "./screens/overviewScreen"
 
-const Tab = createBottomTabNavigator()
 
 
-function DisplayMapScreen(){
+function DisplayMapScreen({ navigation }){
     return(
         <View style = {{flex:1, alignItems:"center", justifyContent:"center"}}>
             <MapScreen/>
@@ -20,7 +21,7 @@ function DisplayMapScreen(){
     );
 }
 
-function DisplayOverviewScreen(){
+function DisplayOverviewScreen({ navigation } ){
     return (
     <View>
         <OverviewScreen/>
@@ -29,7 +30,7 @@ function DisplayOverviewScreen(){
 }
 
 
-function DisplayAboutScreen(){
+function DisplayAboutScreen({ navigation }){
     return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center'}}>
         <AboutScreen/>
@@ -37,8 +38,21 @@ function DisplayAboutScreen(){
     );
 }
 
-const Stack = createStackNavigator();
 
+const MapStack = createStackNavigator();
+
+function MapStackScreen() {
+  return (
+    <MapStack.Navigator>
+      <MapStack.Screen name="Map" component={DisplayMapScreen} />
+      <MapStack.Screen name="Information" component={DisplayOverviewScreen} />
+    </MapStack.Navigator>
+  );
+}
+
+
+
+const Tab = createBottomTabNavigator()
 
 export default function App() {
     return (
@@ -59,19 +73,19 @@ export default function App() {
                 }}
                 />
                 <Tab.Screen 
-                name = "Information" 
+                name = "Waters for fishing" 
                 component = {DisplayOverviewScreen}
                 options={{
                     tabBarIcon: () => (
-                        <SimpleLineIcons name="list" size={24} color="black" />
+                        <FontAwesome5 name="water" size={24} color="royalblue" />
                     )
                 }}/>
                 <Tab.Screen 
-                name = "About" 
+                name = "Tools" 
                 component = {DisplayAboutScreen}
                 options={{
                     tabBarIcon: () => (
-                        <SimpleLineIcons name="info" size={24} color="black"/>
+                        <FontAwesome5 name="tools" size={24} color="black" />
                     )
                 }}/>
             </Tab.Navigator>

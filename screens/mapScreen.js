@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { AppRegistry, StyleSheet, View, Dimensions, Text,TouchableOpacity } from 'react-native';
-import MapView, { PROVIDER_GOOGLE, Callout } from 'react-native-maps';
-import { Marker } from "react-native-maps";
-
+import MapView, { PROVIDER_GOOGLE, Callout, Marker } from 'react-native-maps';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
 export default function MapScreen() {
     
@@ -15,26 +15,37 @@ export default function MapScreen() {
         longitudeDelta: 0.0375,
         }}
         >
-         
-        <MapView.Marker
-            // Bergen
-            coordinate={{latitude:60.397076, longitude: 5.324383}}
-            title = {"Bergen"}
-            description = {"Test test"}
-        />
+
+       
 
         <MapView.Marker
-         /** Haukelandsvatnet **/
-         coordinate={{latitude:60.365616, longitude: 5.469325}}
-            title = {"Haukelandsvatnet"}
-            description = {"Haukelandsvatnet er et vann i gamle Arna kommune, nå Bergen kommune. Haukelandsvatnet er en av vannkildene til Storelva (Bergen) som renner ut i Arnavågen, og det største vannet i Arnavassdraget["}
+         /** Haukelandsvannet **/
+            key = {2}
+            coordinate={{latitude:60.365616, longitude: 5.469325}}
+            title = {"Haukelandsvannet"}
             image = {require("../images/fisk.png")}
-        />
+            >
+            <MapView.Callout style={styles.plainView}>
+                <View>
+                    <Text>
+                    <Text style = {styles.boldText}>Haukelandsvannet</Text>
+                    {"\n\n"}
+                    <Text style = {styles.boldText}>Fiskekort:</Text>
+                    Det er ikke salg av fiskekort i vannet i pr dags dato.
+                    {"\n\n"}
+                    <Text style = {styles.boldText}>Passer for:</Text>
+                    Fluefiske, tørrfluefiske, slukfiske, dorging, meiting.
+                    </Text>
+                </View>
+            </MapView.Callout>
+
+        </MapView.Marker>
 
 
          <MapView.Marker
          /** Nesttunvannet **/
-         coordinate={{latitude:60.323625, longitude: 5.352544}}
+            key = {3}
+            coordinate={{latitude:60.323625, longitude: 5.352544}}
             title = {"Nesttunvannet"}
             description = {"Test test"}
             image = {require("../images/fisk.png")}
@@ -45,7 +56,7 @@ export default function MapScreen() {
          /** Nubbevatnet **/
             coordinate={{latitude:60.360326, longitude: 5.388181}}
             title = {"Nubbevatnet"}
-            description = {"Test test"}
+            description = {"Fiskeart: Ørret"}
             image = {require("../images/fisk.png")}
         />
          
@@ -124,10 +135,6 @@ export default function MapScreen() {
             image = {require("../images/forbudtskilt.png")}
         />
 
-     
-
-        
-
     </MapView>
 };
 
@@ -138,7 +145,19 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
     alignItems: 'center',
     },
+
     map: {
-    ...StyleSheet.absoluteFillObject,
+    ...StyleSheet.absoluteFill,
     },
+
+    plainView: {
+        width:200,
+        position: "absolute"
+          },
+
+    boldText:{
+    fontWeight: "bold",
+    },
+
+
    });

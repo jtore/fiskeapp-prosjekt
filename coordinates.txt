@@ -10,13 +10,8 @@ Storelva: 60.405133, 5.472729
 Ikke lovlig fiske:
 
 Jordalsvatnet: 60.434752, 5.337876
-
 Setervatnet: 60.440567, 5.364284
-
 Indrevatnet: 60.430686, 5.353811
-
 Øvre Jordalsvatnet: 60.415950, 5.394317
-
 Tarlebøvatnet: 60.411807, 5.385995
-
 Store Tindevatnet: 60.405945, 5.369000
