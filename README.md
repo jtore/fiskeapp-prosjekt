@@ -1,4 +1,4 @@
-# Projekt Fresh Fish
+# Project Fresh Fish
 
 ## About: 
 
