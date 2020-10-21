@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "loading",
+    "name": "Fersk Fisk",
     "slug": "loading",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -16,9 +16,11 @@
     "assetBundlePatterns": [
       "**/*"
     ],
-    "ios": {
-      "supportsTablet": true
+
+    "android": {
+      "package": "com.ferskfisk.ferskfisk"
     },
+
     "web": {
       "favicon": "./assets/favicon.png"
     }

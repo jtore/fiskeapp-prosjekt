@@ -34,6 +34,34 @@ export default function OverviewList() {
           value = {search}
         />
 
+      
+          <CollapsedView title="Generelt om fisking i Bergensområdet">
+            <View style = {styles.container}>
+              <View style = {styles.textContainer}>
+                <Text>
+                Det er mange fiskevann og vassdrag i Bergen 
+                hvor det er mulig å få fisk. Her er noen råd om ferskvannsfiske 
+                og lett tilgjengelige fiskeplasser i Bergen.
+                {"\n\n"}
+                <Text style = {styles.boldText}>Artsmangfold:</Text>
+                {"\n"}
+                I ferskvann i Bergen finnes det, 
+                i tillegg til de naturlige artene ørret, laks, ål og røye, 
+                introduserte arter som gjedde, abbor, gullvederbuk og karuss.
+                {"\n\n"} 
+                De innførte artene er nok kommet for å bli, men det er viktig 
+                å hindre ytterligere spredning av både innført og naturlig arter. 
+                Det kreves tillatelse fra Fylkeskommunen for å sette ut fisk.
+                {"\n\n"}
+                Kilde: https://www.bergen.kommune.no/innbyggerhjelpen/natur
+                -klima-miljo/natur/vassdrag/fritidsfiske-i-ferskvann
+                </Text>
+              </View>
+            </View>
+          </CollapsedView>
+     
+
+
        
           <CollapsedView title="Haukelandsvannet - ørret og gjeddefisk">
             <View style = {styles.container}>
@@ -76,7 +104,7 @@ export default function OverviewList() {
                   Tips, råd, erfaringer
                   {"\n\n"}
                   Les og diskuter Haukelandsvannet i {""}
-                  <Text style = {styles.bsfFacebookURL} 
+                  <Text style = {styles.URL} 
                     onPress={() => 
                       Linking.openURL(
                       'https://www.facebook.com/groups/bergensportsfiskere/')}>
@@ -170,18 +198,71 @@ export default function OverviewList() {
         </CollapsedView> 
             
              
-            <CollapsedView title="">
-              <View>
-              <Text>Test</Text>
+            <CollapsedView title="Nubbevannet">
+              <View style = {styles.container}>
+                <View style = {styles.textContainer}>
+                  <Text>
+                  Nubbevatnet er et lite fjellvann som ligger på Landåsfjellet.
+                  En speidergruppe har satt ut ørret i vannet gjennom flere år.
+                  Derfor finnes det en liten bestand av stor ørret i vannet.
+                  {"\n\n"}
+                  Vanlig størrelse på fisken er mellom 300-800g, 
+                  men det er også fanget ørret på godt over kiloet.
+                  {"\n\n"}
+                  Siden det ikke er muligheter for naturlig rekruttering 
+                  er vannet avhengig av jevnlig utsetting av ørret.
+                  {"\n\n"}
+                  Bergen kommune er grunneier rundt hele vannet, 
+                  slik at det er åpent og gratis fiske for alle.
+                  </Text>
+                </View>
               </View>
             </CollapsedView>
 
              
-            <CollapsedView title="">
-              <View>
-              <Text>Test</Text>
+            <CollapsedView title="Liavatnet i Åsane">
+            <View style = {styles.container}>
+                <View style = {styles.textContainer}>
+                  <Text>
+                  I Liavatnet finnes det relativt tette bestander av både 
+                  røye og ørret. Størrelsen på 
+                  fisken ligger i hovedsak mellom 100-200 gram, 
+                  men det finnes nok større eksemplarer i vannet.
+                  {"\n\n"}
+                  Røyen er enklest å fiske om senhøsten 
+                  og vinteren og da gjerne med maggot som agn. 
+                  Det ryktes at berget bak bensinstasjonen i den nordlige delen 
+                  av vannet er en god plass å fiske røye.
+                  Siden det går en turvei rundt hele vannet er Liavatnet et lett 
+                  tilgjengelig fiskevann sentralt i Åsane. 
+                  Bergen kommune er grunneier langs østsiden av vannet.
+                  {"\n\n"}
+                  <Text style = {styles.boldText}>
+                    Laks og sjørret i Storelva i Arnavassdraget
+                  </Text>
+                  {"\n\n"}
+                  Arna Sportsfiskarlag administrerer 
+                  fisket etter laks og sjøørret i Storelva. 
+                  Laget kultiverer fiskebestanden i vassdraget 
+                  ved å sette ut yngel og legge ut øyerogn fra eget klekkeri. 
+                  Laget driver også med tilrettelegging langs 
+                  vassdraget i form av fiskebuer, broer og rydding av boss.
+                  {"\n\n"}
+                  I perioden 2011-2013 har fangsten av laks i 
+                  Storelva vært svært gode. 
+                  Toppåret var i 2012 med en totalfangst på ca. 2,4 tonn. 
+                  Rekordlaksen ble fanget i 2012 og veide hele 15 kg.
+                  {"\n\n"}
+                  Fisketiden i Storelva strekker seg normalt 
+                  fra 1. juli til 15. september. 
+                  For mer informasjon om fiske i Storelva 
+                  se <Text style = {styles.URL}>www.arnasportsfiskarlag.com</Text>.
+
+                  </Text>
+                </View>
               </View>
             </CollapsedView>
+
 
           </View>
         </ScrollView>
@@ -208,7 +289,7 @@ export default function OverviewList() {
       padding: 20,
     },
 
-    bsfFacebookURL: {
+    URL: {
       color: "blue",
     },
 
@@ -223,6 +304,6 @@ export default function OverviewList() {
       },
       photoSource: {
         fontStyle: "italic"
-      }
+      },
     
   });

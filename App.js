@@ -73,7 +73,7 @@ export default function App() {
                 }}
                 />
                 <Tab.Screen 
-                name = "Waters for fishing" 
+                name = "Fishing Waters" 
                 component = {DisplayOverviewScreen}
                 options={{
                     tabBarIcon: () => (

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { AppRegistry, StyleSheet, View, Dimensions, Text,TouchableOpacity } from 'react-native';
-import MapView, { PROVIDER_GOOGLE, Callout, Marker } from 'react-native-maps';
+import {StyleSheet, View, Dimensions, Text,TouchableOpacity } from 'react-native';
+import MapView, { PROVIDER_GOOGLE,} from 'react-native-maps';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
@@ -15,7 +15,6 @@ export default function MapScreen() {
         longitudeDelta: 0.0375,
         }}
         >
-
        
 
         <MapView.Marker
@@ -62,7 +61,7 @@ export default function MapScreen() {
          
 
         <MapView.Marker
-        /** Liavatnet **/
+        /** Liavatnet i Åsane **/
             coordinate={{latitude: 60.372849, longitude:  5.254294}}
             title = {"Liavatnet"}
             description = {"Test test"}
