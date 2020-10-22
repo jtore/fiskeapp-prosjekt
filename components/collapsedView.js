@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 import {Button, View, StyleSheet} from "react-native";
-import Collapsible from "react-native-collapsible"
-
+import Collapsible from "react-native-collapsible";
 
 export default function CollapsedView(props) {
 
@@ -14,6 +13,7 @@ export default function CollapsedView(props) {
                 onPress={() => setCollapsed(!collapsed)} 
                 color = {styles.button.color}
             />
+
             <Collapsible collapsed={collapsed}>
                 {props.children}
             </Collapsible>

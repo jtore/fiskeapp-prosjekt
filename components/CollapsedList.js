@@ -1,3 +1,4 @@
+
 import React, {useState, useRef, Children } from "react";
 import { 
   Text, 
@@ -6,18 +7,22 @@ import {
   Image, 
   SafeAreaView, 
   ScrollView, 
-  Linking}
-
+  Linking,
+  Button}
   from "react-native";
 
 import CollapsedView from "../components/collapsedView"
 import { SearchBar } from 'react-native-elements';
+import { FontAwesome } from '@expo/vector-icons'; 
+import { firestore } from "firebase";
+
+
 
 export default function OverviewList() {
 
   const [search, setSearch] = useState("")
   const listRef = useRef(null)
-  
+
 
   function updateSearch(query) {
     setSearch(query)
@@ -27,13 +32,21 @@ export default function OverviewList() {
       <SafeAreaView>
       <ScrollView>
       <View>
-        
+
         <SearchBar
+          containerStyle={{
+          backgroundColor: 'white', 
+          borderWidth: 1, 
+          borderRadius: 5,}}
+
+          inputContainerStyle = {{
+            backgroundColor: "white"
+          }}
+          
           placeholder = "Søk her..."
           onChangeText = {updateSearch}
           value = {search}
         />
-
       
           <CollapsedView title="Generelt om fisking i Bergensområdet">
             <View style = {styles.container}>
@@ -56,13 +69,11 @@ export default function OverviewList() {
                 Kilde: https://www.bergen.kommune.no/innbyggerhjelpen/natur
                 -klima-miljo/natur/vassdrag/fritidsfiske-i-ferskvann
                 </Text>
+           
               </View>
             </View>
           </CollapsedView>
-     
 
-
-       
           <CollapsedView title="Haukelandsvannet - ørret og gjeddefisk">
             <View style = {styles.container}>
               <View style = {styles.textContainer}>
@@ -104,7 +115,7 @@ export default function OverviewList() {
                   Tips, råd, erfaringer
                   {"\n\n"}
                   Les og diskuter Haukelandsvannet i {""}
-                  <Text style = {styles.URL} 
+                  <Text style = {styles.url} 
                     onPress={() => 
                       Linking.openURL(
                       'https://www.facebook.com/groups/bergensportsfiskere/')}>
@@ -122,7 +133,6 @@ export default function OverviewList() {
                   Bergen Sportsfiskeklubb
                 </Text>
               </View>
-          
           </View>
         </CollapsedView> 
  
@@ -157,7 +167,6 @@ export default function OverviewList() {
               <View style = {styles.textContainer}>
                 <Text>
                   <Text style = {styles.text}> 
-
                   <Text style={styles.boldText}>Område: </Text> 
                   Nordåsvannet er en fjordarm i bydelene Fana, Fyllingsdalen
                   og Ytrebygda i Bergen kommune. 
@@ -196,7 +205,6 @@ export default function OverviewList() {
           
           </View>
         </CollapsedView> 
-            
              
             <CollapsedView title="Nubbevannet">
               <View style = {styles.container}>
@@ -219,7 +227,6 @@ export default function OverviewList() {
               </View>
             </CollapsedView>
 
-             
             <CollapsedView title="Liavatnet i Åsane">
             <View style = {styles.container}>
                 <View style = {styles.textContainer}>
@@ -267,7 +274,7 @@ export default function OverviewList() {
                     For mer informasjon om fiske i Storelva 
                     se 
                   </Text>
-                  <Text style = {styles.URL}>www.arnasportsfiskarlag.com</Text>
+                  <Text style = {styles.url}>www.arnasportsfiskarlag.com</Text>
                 </View>
               </View>
             </CollapsedView>
@@ -297,7 +304,7 @@ export default function OverviewList() {
       padding: 20,
     },
 
-    URL: {
+    url: {
       color: "blue",
     },
 
@@ -313,5 +320,11 @@ export default function OverviewList() {
       photoSource: {
         fontStyle: "italic"
       },
+
+    thumbsUP:{
+      flexDirection: "row",
+      marginTop:20,
+      justifyContent:"space-around",
+    }
     
   });
