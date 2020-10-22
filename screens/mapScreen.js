@@ -36,6 +36,7 @@ export default function MapScreen() {
                     {"\n\n"}
                     <Text style = {styles.boldText}>Agn og teknikk: </Text>
                     Fluefiske, tørrfluefiske, slukfiske, dorging, meiting.
+                    {"\n\n"}
                     <Text style = {styles.boldText}>Bestand: </Text>
                     Ørret og gjedde
                     </Text>
@@ -225,8 +226,10 @@ const styles = StyleSheet.create({
     },
 
     plainView: {
+        flex:1,
         width:200,
         margin: 50,
+        alignContent: "center",
         position: "absolute"
           },
 

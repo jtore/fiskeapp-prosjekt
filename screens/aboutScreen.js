@@ -4,7 +4,7 @@ import {View, Text, StyleSheet} from "react-native"
 export default function AboutScreen() {
     return (
         <View>
-            <Text style={styles.text}>Laget av Einar, Mads og Joakim</Text>
+            <Text style={styles.text}>Verktøy</Text>
         </View>
     )
 

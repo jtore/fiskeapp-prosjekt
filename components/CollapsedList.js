@@ -29,7 +29,7 @@ export default function OverviewList() {
       <View>
         
         <SearchBar
-          placeholder = "HMMMM..."
+          placeholder = "Søk her..."
           onChangeText = {updateSearch}
           value = {search}
         />
@@ -242,7 +242,7 @@ export default function OverviewList() {
               </View>
             </CollapsedView>
             
-            <CollapsedView title="Storelva i Arnavassdraget">
+            <CollapsedView title="Storelva Arnavassdraget">
             <View style = {styles.container}>
                 <View style = {styles.textContainer}>
                   <Text>
