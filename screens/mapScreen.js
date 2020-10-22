@@ -11,8 +11,9 @@ export default function MapScreen() {
         initialRegion={{
         latitude: 60.397076,
         longitude: 5.324383,
-        latitudeDelta: 0.0491,
-        longitudeDelta: 0.0375,
+        // Zoom-kontroll
+        latitudeDelta: 0.1491,
+        longitudeDelta: 0.1375,
         }}
         >
        
@@ -24,21 +25,26 @@ export default function MapScreen() {
             title = {"Haukelandsvannet"}
             image = {require("../images/fisk.png")}
             >
+
             <MapView.Callout style={styles.plainView}>
                 <View>
                     <Text>
                     <Text style = {styles.boldText}>Haukelandsvannet</Text>
                     {"\n\n"}
-                    <Text style = {styles.boldText}>Fiskekort:</Text>
+                    <Text style = {styles.boldText}>Fiskekort: </Text>
                     Det er ikke salg av fiskekort i vannet i pr dags dato.
                     {"\n\n"}
-                    <Text style = {styles.boldText}>Passer for:</Text>
+                    <Text style = {styles.boldText}>Agn og teknikk: </Text>
                     Fluefiske, tørrfluefiske, slukfiske, dorging, meiting.
+                    <Text style = {styles.boldText}>Bestand: </Text>
+                    Ørret og gjedde
                     </Text>
+                    
                 </View>
             </MapView.Callout>
-
         </MapView.Marker>
+        
+        
 
 
          <MapView.Marker
@@ -46,27 +52,73 @@ export default function MapScreen() {
             key = {3}
             coordinate={{latitude:60.323625, longitude: 5.352544}}
             title = {"Nesttunvannet"}
-            description = {"Test test"}
             image = {require("../images/fisk.png")}
-        />
+            >
+    
+            <MapView.Callout style={styles.plainView}>
+                <View>
+                    <Text>
+                    <Text style = {styles.boldText}>Nesttunvannet</Text>
+                    {"\n\n"}
+                    <Text style = {styles.boldText}>Fiskekort: </Text>
+                    Det er ikke salg av fiskekort i vannet i pr dags dato.
+                    {"\n\n"}
+                    <Text style = {styles.boldText}>Bestand: </Text>
+                    Ørret, gjedde, abbor
+                    </Text>
+                </View>
+            </MapView.Callout>
+
+        </MapView.Marker>
         
 
         <MapView.Marker
          /** Nubbevatnet **/
             coordinate={{latitude:60.360326, longitude: 5.388181}}
             title = {"Nubbevatnet"}
-            description = {"Fiskeart: Ørret"}
             image = {require("../images/fisk.png")}
-        />
+            >
+            
+                <MapView.Callout style={styles.plainView}>
+                    <View>
+                        <Text>
+                        <Text style = {styles.boldText}>Haukelandsvannet</Text>
+                        {"\n\n"}
+                        <Text style = {styles.boldText}>Fiskekort: </Text>
+                        Vannet er åpent og gratis for alle 
+                        {"\n\n"}
+                        <Text style = {styles.boldText}>Bestand: </Text>
+                        Ørret
+                        </Text>
+                    </View>
+                </MapView.Callout>
+
+            </MapView.Marker>
+
          
 
         <MapView.Marker
         /** Liavatnet i Åsane **/
             coordinate={{latitude: 60.372849, longitude:  5.254294}}
             title = {"Liavatnet"}
-            description = {"Test test"}
             image = {require("../images/fisk.png")}
-        />
+            >
+            
+            <MapView.Callout style={styles.plainView}>
+                <View>
+                    <Text>
+                    <Text style = {styles.boldText}>Liavatnet i Åsane</Text>
+                    {"\n\n"}
+                    <Text style = {styles.boldText}>Fiskekort: </Text>
+                    Det er ikke salg av fiskekort i vannet i pr dags dato.
+                    {"\n\n"}
+                    <Text style = {styles.boldText}>Bestand: </Text>
+                    Røye og Ørret
+                    </Text>
+                </View>
+            </MapView.Callout>
+
+        </MapView.Marker>
 
         <MapView.Marker
         /** Storelva:  **/
@@ -74,7 +126,28 @@ export default function MapScreen() {
             title = {"Storelva"}
             description = {"Test test"}
             image = {require("../images/fisk.png")}
-        />
+            >
+            
+            <MapView.Callout style={styles.plainView}>
+                <View>
+                    <Text>
+                    <Text style = {styles.boldText}>
+                        Storelva i Arnavassdraget
+                    </Text>
+                    {"\n\n"}
+                    <Text style = {styles.boldText}>Fiskekort: </Text>
+                    Ja, fås av Arna Sportsfiskarlag
+                    {"\n\n"}
+                    <Text style = {styles.boldText}>Bestand: </Text>
+                    Laks og sjørret
+                    {"\n\n"}
+                    <Text style = {styles.boldText}>Fisketid: </Text>
+                    Omtrent 1.juli til 15.september
+                    </Text>
+                </View>
+            </MapView.Callout>
+
+        </MapView.Marker>
 
         
         <MapView.Marker
@@ -83,7 +156,10 @@ export default function MapScreen() {
             title = {"Jordalsvatnet"}
             description = {"Nedbørsfelt, IKKE lovlig fiske"}
             image = {require("../images/forbudtskilt.png")}
-        />
+        >
+
+        </MapView.Marker>
+
 
 
 
@@ -93,8 +169,7 @@ export default function MapScreen() {
             title = {"Setervatnet"}
             description = {"Nedbørsfelt, IKKE lovlig fiske"}
             image = {require("../images/forbudtskilt.png")}
-        />
-
+        />        
 
 
         <MapView.Marker
@@ -133,16 +208,16 @@ export default function MapScreen() {
             description = {"Nedbørsfelt, IKKE lovlig fiske"}
             image = {require("../images/forbudtskilt.png")}
         />
-
+        
     </MapView>
 };
 
 
 const styles = StyleSheet.create({
     container: {
-    flex: 1,
-    justifyContent: 'flex-end',
-    alignItems: 'center',
+        flex: 1,
+        justifyContent: 'flex-end',
+        alignItems: 'center',
     },
 
     map: {
@@ -151,6 +226,7 @@ const styles = StyleSheet.create({
 
     plainView: {
         width:200,
+        margin: 50,
         position: "absolute"
           },
 

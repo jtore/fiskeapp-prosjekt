@@ -64,7 +64,7 @@ export default function App() {
             }}
             >
                 <Tab.Screen 
-                name = "Map" 
+                name = "Kart" 
                 component = {DisplayMapScreen}
                 options ={{
                     tabBarIcon: () => (
@@ -73,7 +73,7 @@ export default function App() {
                 }}
                 />
                 <Tab.Screen 
-                name = "Fishing Waters" 
+                name = "Fiskevann" 
                 component = {DisplayOverviewScreen}
                 options={{
                     tabBarIcon: () => (
@@ -81,7 +81,7 @@ export default function App() {
                     )
                 }}/>
                 <Tab.Screen 
-                name = "Tools" 
+                name = "Verktøy" 
                 component = {DisplayAboutScreen}
                 options={{
                     tabBarIcon: () => (

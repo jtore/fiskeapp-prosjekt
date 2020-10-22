@@ -125,7 +125,7 @@ export default function OverviewList() {
           
           </View>
         </CollapsedView> 
-            
+ 
             <CollapsedView title="Nesttunvatnet">
               <View style = {styles.container}>
                 <View style = {styles.textContainer}>
@@ -169,7 +169,7 @@ export default function OverviewList() {
                   <Text style={styles.boldText}>Fiskekort: Nei</Text> 
                   {"\n\n"}
 
-                  <Text style={styles.boldText}>Passer for:</Text> 
+                  <Text style={styles.boldText}>Bestand:</Text> 
                   {"\n\n"}
                   Laks, Havabbor,
                   Lyr, Sei, Makrell og Torsk
@@ -224,46 +224,54 @@ export default function OverviewList() {
             <View style = {styles.container}>
                 <View style = {styles.textContainer}>
                   <Text>
-                  I Liavatnet finnes det relativt tette bestander av både 
-                  røye og ørret. Størrelsen på 
-                  fisken ligger i hovedsak mellom 100-200 gram, 
-                  men det finnes nok større eksemplarer i vannet.
-                  {"\n\n"}
-                  Røyen er enklest å fiske om senhøsten 
-                  og vinteren og da gjerne med maggot som agn. 
-                  Det ryktes at berget bak bensinstasjonen i den nordlige delen 
-                  av vannet er en god plass å fiske røye.
-                  Siden det går en turvei rundt hele vannet er Liavatnet et lett 
-                  tilgjengelig fiskevann sentralt i Åsane. 
-                  Bergen kommune er grunneier langs østsiden av vannet.
-                  {"\n\n"}
-                  <Text style = {styles.boldText}>
-                    Laks og sjørret i Storelva i Arnavassdraget
-                  </Text>
-                  {"\n\n"}
-                  Arna Sportsfiskarlag administrerer 
-                  fisket etter laks og sjøørret i Storelva. 
-                  Laget kultiverer fiskebestanden i vassdraget 
-                  ved å sette ut yngel og legge ut øyerogn fra eget klekkeri. 
-                  Laget driver også med tilrettelegging langs 
-                  vassdraget i form av fiskebuer, broer og rydding av boss.
-                  {"\n\n"}
-                  I perioden 2011-2013 har fangsten av laks i 
-                  Storelva vært svært gode. 
-                  Toppåret var i 2012 med en totalfangst på ca. 2,4 tonn. 
-                  Rekordlaksen ble fanget i 2012 og veide hele 15 kg.
-                  {"\n\n"}
-                  Fisketiden i Storelva strekker seg normalt 
-                  fra 1. juli til 15. september. 
-                  For mer informasjon om fiske i Storelva 
-                  se <Text style = {styles.URL}>www.arnasportsfiskarlag.com</Text>.
-
+                    I Liavatnet finnes det relativt tette bestander av både 
+                    røye og ørret. Størrelsen på 
+                    fisken ligger i hovedsak mellom 100-200 gram, 
+                    men det finnes nok større eksemplarer i vannet.
+                    {"\n\n"}
+                    Røyen er enklest å fiske om senhøsten 
+                    og vinteren og da gjerne med maggot som agn. 
+                    Det ryktes at berget bak bensinstasjonen i den nordlige delen 
+                    av vannet er en god plass å fiske røye.
+                    
+                    Siden det går en turvei rundt hele vannet er Liavatnet et lett 
+                    tilgjengelig fiskevann sentralt i Åsane. 
+                    Bergen kommune er grunneier langs østsiden av vannet.
                   </Text>
                 </View>
               </View>
             </CollapsedView>
-
-
+            
+            <CollapsedView title="Storelva i Arnavassdraget">
+            <View style = {styles.container}>
+                <View style = {styles.textContainer}>
+                  <Text>
+                    <Text style = {styles.boldText}>
+                        Laks og sjørret i Storelva i Arnavassdraget
+                    </Text>
+                    {"\n\n"}
+                    Arna Sportsfiskarlag administrerer 
+                    fisket etter laks og sjøørret i Storelva. 
+                    Laget kultiverer fiskebestanden i vassdraget 
+                    ved å sette ut yngel og legge ut øyerogn fra eget klekkeri. 
+                    Laget driver også med tilrettelegging langs 
+                    vassdraget i form av fiskebuer, broer og rydding av boss.
+                    {"\n\n"}
+                    I perioden 2011-2013 har fangsten av laks i 
+                    Storelva vært svært gode. 
+                    Toppåret var i 2012 med en totalfangst på ca. 2,4 tonn. 
+                    Rekordlaksen ble fanget i 2012 og veide hele 15 kg.
+                    {"\n\n"}
+                    Fisketiden i Storelva strekker seg normalt 
+                    fra 1. juli til 15. september. 
+                    For mer informasjon om fiske i Storelva 
+                    se 
+                  </Text>
+                  <Text style = {styles.URL}>www.arnasportsfiskarlag.com</Text>
+                </View>
+              </View>
+            </CollapsedView>
+          
           </View>
         </ScrollView>
       </SafeAreaView>
