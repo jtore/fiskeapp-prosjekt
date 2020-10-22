@@ -23,7 +23,7 @@ was lite, easy to navigate and made for a good user experience.
 
 ## Demo
 
-[Old demo](https://i.imgur.com/MLKB3Uw.mp4)
+[Old demo](https://i.imgur.com/MLKB3Uw.mp4) 
 [New demo!](https://i.imgur.com/1meSNK4.mp4)
 
 
