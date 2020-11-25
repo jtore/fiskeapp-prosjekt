@@ -6,6 +6,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import { SimpleLineIcons } from '@expo/vector-icons'; 
 import { FontAwesome5 } from '@expo/vector-icons'; 
+import { MaterialCommunityIcons } from '@expo/vector-icons'; 
 
 import MapScreen from "./screens/mapScreen";
 import AboutScreen from "./screens/aboutScreen"
@@ -60,15 +61,15 @@ export default function App() {
             <Tab.Navigator 
             initialRouteName = "Map"
             tabBarOptions ={{
-                activeTintColor: "green"
+                activeTintColor: "green",
             }}
             >
                 <Tab.Screen 
                 name = "Kart" 
                 component = {DisplayMapScreen}
                 options ={{
-                    tabBarIcon: () => (
-                        <SimpleLineIcons name="map" size={24} color="black" />
+                    tabBarIcon: ({color}) => (
+                        <SimpleLineIcons name="map" size={24} color={color} />
                     )
                 }}
                 />
@@ -76,16 +77,17 @@ export default function App() {
                 name = "Fiskevann" 
                 component = {DisplayOverviewScreen}
                 options={{
-                    tabBarIcon: () => (
-                        <FontAwesome5 name="water" size={24} color="royalblue" />
+                    tabBarIcon: ({color}) => (
+                        <FontAwesome5 name="water" size={24} color={color} />
                     )
                 }}/>
                 <Tab.Screen 
-                name = "Verktøy" 
+                name = "Fiskekort" 
                 component = {DisplayAboutScreen}
                 options={{
-                    tabBarIcon: () => (
-                        <FontAwesome5 name="tools" size={24} color="black" />
+                    tabBarIcon: ({color}) => (
+                        <MaterialCommunityIcons name="card-bulleted-outline" 
+                        size={24} color={color} />
                     )
                 }}/>
             </Tab.Navigator>
